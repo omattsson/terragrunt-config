@@ -132,6 +132,7 @@ inputs = {
 inputs = {
   resource_group_name = "celebrimbor"
 }
+```
 
 ## Best Practices
 
