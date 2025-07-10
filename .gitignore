@@ -1,0 +1,40 @@
+# Terraform and Terragrunt .gitignore
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+**/.terraform.lock.hcl
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude override files as they are usually used to override resources locally and so
+# are not checked in
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terragrunt cache
+.terragrunt-cache
+
+# Sensitive variable files
+secrets.auto.tfvars
+secrets.auto.tfvars.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore plan output
+*.plan
+
+# Ignore backup files
+*.backup
+
+# Ignore logs
+*.log
