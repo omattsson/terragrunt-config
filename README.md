@@ -7,7 +7,7 @@ This repository contains a structured Terragrunt configuration for managing Azur
 
 In this example I use random resources to generate outputs so no azurerm is needed. This should be enough to test how Terragrunt can be used to handle configuration changes on different levels in the hierarchy.
 
-The config to generate the backend config is commented out in root.hcl
+The config to generate the backend config is in root.hcl and the subscription specific variables that needs to be set are in subscription.hcl.
 
 ## Repository Structure
 
