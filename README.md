@@ -48,6 +48,7 @@ The config to generate the backend config is in root.hcl and the subscription sp
 cd dev/euw/dev1/unit1
 
 # Initialize and apply
+export ARM_USE_AZUREAD=true 
 terragrunt init
 terragrunt apply
 ```
