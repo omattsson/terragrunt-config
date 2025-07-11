@@ -5,7 +5,7 @@ locals {
   stack             = basename(get_terragrunt_dir())
   realm             = local.stack
   default_tags = {
-    stack      = local.stack
-    location  = local.site_vars.locals.location
+    stack    = local.stack
+    location = local.site_vars.locals.location
   }
 }

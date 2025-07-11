@@ -35,20 +35,20 @@ EOF
 # Configure Terragrunt to automatically store tfstate files in an Blob Storage container. The storage account and
 # contain must already exist.
 # For this test we don't use a remote state.
-#remote_state {
-#  backend = "azurerm"
-#  generate = {
-#    path      = "backend.tf"
-#    if_exists = "overwrite"
-#  }
-#  config = {
-#    subscription_id      = local.subscription_id
-#    resource_group_name  = local.deployment_storage_resource_group_name
-#    storage_account_name = local.deployment_storage_account_name
-#    container_name       = local.tf_container_name
-#    key                  = "${path_relative_to_include("site")}/terraform.tfstate"
-#  }
-#}
+remote_state {
+  backend = "azurerm"
+  generate = {
+    path      = "backend.tf"
+    if_exists = "overwrite"
+  }
+  config = {
+    subscription_id      = local.subscription_id
+    resource_group_name  = local.deployment_storage_resource_group_name
+    storage_account_name = local.deployment_storage_account_name
+    container_name       = local.tf_container_name
+    key                  = "${path_relative_to_include("site")}/terraform.tfstate"
+  }
+}
 # Generate a common variables file that can be included in all child configurations
 generate "common-variables" {
   path      = "common.variables.tf"
@@ -89,7 +89,7 @@ inputs = merge(
   {
     prefix = "${local.subscription_vars.locals.environment}-${local.site_vars.locals.site_name}-${local.stack_vars.locals.stack}"
   }
-  )
+)
 # ---------------------------------------------------------------------------------------------------------------------
 # END GLOBAL PARAMETERS
 # ---------------------------------------------------------------------------------------------------------------------

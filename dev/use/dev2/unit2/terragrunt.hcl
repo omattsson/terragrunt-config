@@ -13,9 +13,9 @@ terraform {
 }
 # Here we set up the inputs for the unit
 inputs = {
-  project_name = "An another really funny project name"
+  project_name        = "An another really funny project name"
   resource_group_name = "rg-${get_env("USER", "default")}-${include.envcommon.locals.site_vars.locals.location}"
-  default_tags=    {
-      Owner = "The US Team"
-    }
+  default_tags = {
+    Owner = "The US Team"
+  }
 }

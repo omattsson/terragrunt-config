@@ -13,6 +13,6 @@ terraform {
 }
 # Here we set up the inputs for the unit
 inputs = {
-  project_name = "All your base are belong to us"
+  project_name        = "All your base are belong to us"
   resource_group_name = "morgoth"
 }

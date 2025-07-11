@@ -5,6 +5,6 @@ locals {
   stack             = basename(get_terragrunt_dir())
   realm             = local.stack
   tags = {
-    stack      = local.stack
+    stack = local.stack
   }
 }
